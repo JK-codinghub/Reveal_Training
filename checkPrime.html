@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Checking Prime Number</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <br>
+    <div class="container">
+        <h4>First Task</h4>
+        <!-- JavaScript function to check given number is prime or not  -->
+        <script type="text/javascript">
+            function isPrime(n) {
+                var n, i, count = 0;
+                for (i = 2; i <= n / 2; ++i) {
+                    // check for non prime number
+                    if (n % i == 0) {
+                        count = 1;
+                        break;
+                    }
+                }
+                if (count == 0) {
+                    document.writeln("<br> Given Value is - " + n + "");
+                    return document.write("<b>"+true+"</b>");
+                } else {
+                    document.writeln("<br> Given Value is - " + n + "");
+                    return document.write("<b>"+false+"</b>");
+
+                }
+
+            }
+            //call Prime function to test given number is prime or not
+            document.write("Prime Number Or Not [Output with boolean value]");
+            isPrime(5);
+            isPrime(8);
+            isPrime(2);
+        </script>
+
+    </div>
+
+</body>
+
+
+</html>
